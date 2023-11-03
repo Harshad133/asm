@@ -1,0 +1,18 @@
+;MAX IN ARRAY
+
+MOV CX,05H
+LEA SI,[1000H]
+MOV AX,[SI]
+
+LOOP:
+    INC SI
+    MOV BX,[SI]
+    CMP AX,BX
+    JNC AHED
+    MOV AX,BX
+    
+AHED:
+    DEC CX
+    JNZ LOOP
+HLT
+      
